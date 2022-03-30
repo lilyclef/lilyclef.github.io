@@ -18,6 +18,9 @@ $beige:    #fbf7f0;
 
 // $red:      #e55235;
 $purple:   #5d2f86;
+$moon_base3: #1b1d2c;
+$moon_base7: #2f334d;
+$moon_base9: #444a73;
 $brown:    #aa9c84;
 
 $blue-300: #8ed6fb;
@@ -64,7 +67,7 @@ $navbar-light-toggler-icon-bg: none;
 // Settings for the `<body>` element.
 
 $body-bg:                   $white;
-$body-color:                $black;
+$body-color:                $moon_base7;
 
 // Links
 //
@@ -112,15 +115,15 @@ $font-family-base:            $font-family-sans-serif;
 // stylelint-enable value-keyword-case
 
 $font-size-base:              1rem; // Assumes the browser default, typically `16px`
-$font-size-xl:                $font-size-base * 1.375;
-$font-size-lg:                $font-size-base * 1.25;
-$font-size-md:                $font-size-base * 1.125;
+$font-size-xl:                $font-size-base * 1.275;
+$font-size-lg:                $font-size-base * 1.15;
+$font-size-md:                $font-size-base * 1.025;
 $font-size-sm:                $font-size-base * 0.875;
 
 // $line-height-base:            1.5;
 
 $headings-font-family:        null;
-$headings-font-weight:        700;
+$headings-font-weight:        600;
 
 $lead-font-weight:            400;
 
@@ -139,7 +142,7 @@ $navbar-padding-x:                  null;
 
 $navbar-nav-link-padding-x:         0.5rem;
 
-$navbar-light-color:                $black;
+$navbar-light-color:                $moon_base3;
 $navbar-light-hover-color:          $primary;
 $navbar-light-active-color:         $primary;
 
@@ -178,10 +181,10 @@ $dropdown-config: (
   include-desc: yes,
   background-category-header: $white,
   font-size: normal,
-  header-color: $black,
-  title-color: $black,
-  subtitle-color: $black,
-  text-color: $black,
+  header-color: $moon_base7,
+  title-color: $moon_base7,
+  subtitle-color: $moon_base7,
+  text-color: $moon_base7,
   highlight-color: $purple,
   highlight-opacity: 0.1,
   highlight-type: underline
