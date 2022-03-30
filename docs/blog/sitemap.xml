@@ -2,7 +2,14 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     <url>
-      <loc>https://lilyclef.github.io/blog/pdca%E3%81%AF%E7%9F%A5%E3%82%89%E3%81%AA%E3%81%84%E3%81%91%E3%82%8C%E3%81%A9%E5%90%8D%E5%8F%A4%E5%B1%8B%E9%A3%AF%E3%81%AF%E7%BE%8E%E5%91%B3%E3%81%97%E3%81%84%E3%81%A8%E6%80%9D%E3%81%86%E3%82%88/</loc>
+      <loc>https://lilyclef.github.io/blog/20220331_hugo/</loc>
+      <lastmod>2022-03-30T22:21:05+09:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>https://lilyclef.github.io/blog/20220331_pdca/</loc>
       <lastmod>2022-03-30T21:20:00+09:00</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.5</priority>

@@ -6,14 +6,27 @@
     <description>Recent content in 砂塵 on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Tue, 06 Oct 2020 08:49:55 +0000</lastBuildDate><atom:link href="https://lilyclef.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 30 Mar 2022 21:20:00 +0900</lastBuildDate><atom:link href="https://lilyclef.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>PDCAは知らないけれど名古屋飯は美味しいと思うよ</title>
-      <link>https://lilyclef.github.io/blog/pdca%E3%81%AF%E7%9F%A5%E3%82%89%E3%81%AA%E3%81%84%E3%81%91%E3%82%8C%E3%81%A9%E5%90%8D%E5%8F%A4%E5%B1%8B%E9%A3%AF%E3%81%AF%E7%BE%8E%E5%91%B3%E3%81%97%E3%81%84%E3%81%A8%E6%80%9D%E3%81%86%E3%82%88/</link>
+      <title>結局Hugo</title>
+      <link>https://lilyclef.github.io/blog/20220331_hugo/</link>
+      <pubDate>Wed, 30 Mar 2022 22:21:05 +0900</pubDate>
+      
+      <guid>https://lilyclef.github.io/blog/20220331_hugo/</guid>
+      <description>言い訳 # ブログは一から自分で実装したほうがいいと思うのだけど、明日には自分のやる気が無くなっているかもしれない。そのうち、自分で実装したものに置き換える日が来るといいね。
+今回ハマったところ #  draftをtrueにするとPublishされない。 それはそう Hugo共通の仕様なのに忘れていた。  今回変えたところ #  色変更 同じHugoでもThemeによってレイアウトの変更の仕方が異なる。 今回は公式を見れば変更できたので、よく考えられていると思う。 色は愛用しているMoonlight Themeに寄せて選んだ。  今後変えたいところ #  フォントを変えたい。 明日(2022/04/01)にモリサワフォントがGoogle Fontsの仲間入りするそうなのでそれを待つ。 トップ画面で何をするか考える。 Markdownをシュッと書ける編集・投稿ページが欲しい。 自分でブログを実装する時間を持つ。今はOS制作を優先したい。  最後に # 右上でダークモードとライトモードの切り替えができて、おしゃれで良い。
+有効化すれば多言語切り替えにも対応していたり、色々とやりこみ要素はある。
+ブログ作成自体はN度目なのだけれど、今度は三日坊主にならないことを願う。</description>
+    </item>
+    
+    <item>
+      <title>PDCAは知らないけれど名古屋飯は美味しい</title>
+      <link>https://lilyclef.github.io/blog/20220331_pdca/</link>
       <pubDate>Wed, 30 Mar 2022 21:20:00 +0900</pubDate>
       
-      <guid>https://lilyclef.github.io/blog/pdca%E3%81%AF%E7%9F%A5%E3%82%89%E3%81%AA%E3%81%84%E3%81%91%E3%82%8C%E3%81%A9%E5%90%8D%E5%8F%A4%E5%B1%8B%E9%A3%AF%E3%81%AF%E7%BE%8E%E5%91%B3%E3%81%97%E3%81%84%E3%81%A8%E6%80%9D%E3%81%86%E3%82%88/</guid>
-      <description></description>
+      <guid>https://lilyclef.github.io/blog/20220331_pdca/</guid>
+      <description>名古屋美味しい # 有給+休日で３日ほどお時間を頂いて、本を読むことにした。 技術書を読むのが苦手で、何かを良いサイクルで終わらせることも苦手なのだけれど、美味しいものを食べて温泉に入ったら本が読めました。 ありがとう、名古屋。
+[TODO]名古屋訪問記をここに書く。 # </description>
     </item>
     
   </channel>
