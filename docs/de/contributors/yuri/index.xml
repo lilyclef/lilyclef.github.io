@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Yuri on </title>
+    <link>https://lilyclef.github.io/de/contributors/yuri/</link>
+    <description>Recent content in Yuri on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-JP</language>
+    <lastBuildDate>Wed, 30 Mar 2022 21:20:00 +0900</lastBuildDate><atom:link href="https://lilyclef.github.io/de/contributors/yuri/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PDCAは知らないけれど名古屋飯は美味しいと思うよ</title>
+      <link>https://lilyclef.github.io/de/ja/blog/20220330/</link>
+      <pubDate>Wed, 30 Mar 2022 21:20:00 +0900</pubDate>
+      
+      <guid>https://lilyclef.github.io/de/ja/blog/20220330/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
