@@ -1,17 +1,17 @@
-baseurl = "https://doks.netlify.app/"
+baseurl = "https://clef.tokyo/"
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true
 enableEmoji = true
 enableGitInfo = false
 enableRobotsTXT = true
-languageCode = "en-US"
+languageCode = "ja-JP"
 paginate = 7
 rssLimit = 10
 
 # Multilingual
-defaultContentLanguage = "en"
-disableLanguages = ["de", "nl"]
+defaultContentLanguage = "ja"
+disableLanguages = ["en"]
 # defaultContentLanguageInSubdir = true
 
 # add redirects/headers
