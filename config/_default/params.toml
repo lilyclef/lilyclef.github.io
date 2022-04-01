@@ -10,7 +10,7 @@ description = "Private Blog"
 # docsVersion = "0.3"
 
 ## Open Graph
-images = ["doks.png"]
+images = ["vanvase.jpeg"]
 ogLocale = "en_US"
 domainTLD = "doks.netlify.app"
 titleHome = "Doks Theme"
@@ -31,7 +31,7 @@ schemaLocale = "en-US"
 schemaLogo = "logo-doks.png"
 schemaLogoWidth = 512
 schemaLogoHeight = 512
-schemaImage = "doks.png"
+schemaImage = "vanvase.jpeg"
 schemaImageWidth = 1280
 schemaImageHeight = 640
 schemaTwitter = "https://twitter.com/getdoks"
