@@ -6,7 +6,7 @@
     <description>Recent content in Yuri on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Tue, 06 Oct 2020 08:50:45 +0000</lastBuildDate><atom:link href="https://lilyclef.github.io/contributors/yuri/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://lilyclef.github.io/contributors/yuri/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>結局Hugo</title>
       <link>https://lilyclef.github.io/blog/20220331_hugo/</link>
@@ -27,6 +27,77 @@
       <guid>https://lilyclef.github.io/blog/20220331_pdca/</guid>
       <description>名古屋美味しい # 有給+休日で３日ほどお時間を頂いて、本を読むことにした。 技術書を読むのが苦手で、何かを良いサイクルで終わらせることも苦手なのだけれど、美味しいものを食べて温泉に入ったら本が読めました。 ありがとう、名古屋。
 [TODO]名古屋訪問記をここに書く。 # </description>
+    </item>
+    
+    <item>
+      <title>Advent of Cyber 2020 Christmas</title>
+      <link>https://lilyclef.github.io/blog/20201207_adventcyber/</link>
+      <pubDate>Thu, 10 Dec 2020 22:00:00 +0900</pubDate>
+      
+      <guid>https://lilyclef.github.io/blog/20201207_adventcyber/</guid>
+      <description>本記事は旧ブログから移行しました
+Advent Cyber 2020 やってみたら楽しかった。 #    TryHackMe!という教育サイトのイベントで、教育的なCTFになっておりとても楽しいCTF。ご丁寧にサンタ帽の陽気な解説者によるYouTubeで解説動画もあり、辛いときはそれもヒントになるので、CTF解けなくて苦手意識感じている人にも向いている予感。 一時的な環境が作成され、VPNで接続してチャレンジする形式でウェブサイトの作りがなんだか凝っている。
+Day1 A Christmas Crisis #  VPNを繋ぐときにリージョンをAU-xxxにしないと繋がらない罠があるので注意。 HTTP, Cookieについての解説記事が書かれている。 フォーマット名はヒントの&amp;quot;shorthand for binary&amp;quot;で検索する。  &amp;gt;&amp;gt;&amp;gt; &#39;もふもふ&#39;.encode(&#39;utf-8&#39;).hex() &#39;e38282e381b5e38282e381b5&#39; &amp;gt;&amp;gt;&amp;gt; bytearray.fromhex(&amp;quot;e38282e381b5e38282e381b5&amp;quot;).decode() &#39;もふもふ&#39;   変換サイト使ってしまったけれど、Pythonですぐ変換できる。 Cookieeは書き換えてリロードすれば読み込まれる。  Day2 The Elf Strikes Back! #  php-reverse-shellをphpとしてうまくアップロードさせて、リバースシェル状況を作ることでbashを奪うことが出来た。  Kali/AttackBoxに上のファイルがあるらしい。   リバースシェルはAttackerがncコマンドのlisten mode（sudo nc -lvnp 443）を使うことで設定可能。 最初MacBookのncで-lが使えなかったが、brew install netcatでインストールしたコマンドであればOK リバース シェル悪用の防御 BashでTCP/UDP通信を行う | 俺的備忘録 〜なんかいろいろ〜  Day3 Christmas Chaos #  Burpの使い方講座。 ブラウザのプロキシを使ってBurpに転送させ、リクエストを止めたりしつつ、使う。FoxyProxyも使う。 ユーザー名とパスワードの組み合わせを自動で合わせてtryしてくれる機能もあった。 Check that Burp Suite&amp;rsquo;s proxy listener is active - PortSwigger Configuring Firefox to work with Burp - PortSwigger Configuring your external browser to work with Burp - PortSwigger  Day4 Santa&amp;rsquo;s watching #  Fuzzing = fancy bruteforcing をやってみようという回 GoBusterというツールで隠れファイルやディレクトリの検出ができる。  OJ/gobuster: Directory/File, DNS and VHost busting tool written in Go gobuster dir -u http://example.</description>
+    </item>
+    
+    <item>
+      <title>InCTF参加記:PolyRSA</title>
+      <link>https://lilyclef.github.io/blog/20200803_inctf/</link>
+      <pubDate>Mon, 03 Aug 2020 22:21:22 +0900</pubDate>
+      
+      <guid>https://lilyclef.github.io/blog/20200803_inctf/</guid>
+      <description>本記事は旧ブログから移行しました
+感想 #   なんか惜しいところまで行ったような気がするんだけど、そうでもなかったりする&amp;hellip;
+  お久しぶりの方々にお会いできたのは嬉しかった。
+  解けた人々によるwriteupはこちら
+ https://ctftime.org/event/981/tasks/ これを見ながら、自分でも再現できる手順を書きます。    PolyRSA #  「これ、研究で某暗号をやった人間として、できなきゃあかんやつ&amp;hellip;」と思いつつトライ。大体の方針は立つのに細かいところで動けないのはやはり理解していないのでは？という話はさておき。  自分がたどり着いたところ #   まずはじめに、作問者からpとnとm^eとeが与えられている。
+ RSAのの性質の式をこねってmを出す典型問題というストーリーはわかる。    ちょっとRSAについて復習
+ via: RSA暗号の仕組みと安全性 | 高校数学の美しい物語 このページのk1をe、k2をdと表現するパターンがある点に注意。どちらでもいい。    [人物] 公開鍵（n, e） 秘密鍵 d メッセージ m 暗号文 c = m^e 作成途中で出てくる機密情報的なもの p, q [性質] n = p * q (ただしpとqは素数, p!= q) e*d = 1 % (p-1)(q-1) m = (m^e)^ d % n 与えられたものを見る p = 2470567871 n = めっちゃ長い多項式 q = 不明 =&amp;gt; この時点で、RSA暗号の特徴よりn = p * qのため計算できるはずだが、多項式でだるくされている e = 65537 c = m^e = めっちゃ長い多項式 d = 秘密鍵、知りたい。   CTFでの多項式のRSA暗号問題について調べてみる。  via: 0ctf 2019 Quals の babyrsa (crypto) の Writeup - ヾﾉ*＞ㅅ＜)ﾉｼ帳    [引用]</description>
+    </item>
+    
+    <item>
+      <title>lilyclefはLivyを起動したい</title>
+      <link>https://lilyclef.github.io/blog/20200722_livy/</link>
+      <pubDate>Wed, 22 Jul 2020 00:00:00 +0900</pubDate>
+      
+      <guid>https://lilyclef.github.io/blog/20200722_livy/</guid>
+      <description>本記事は旧ブログから移行しました
+Dockerfile # Issueに落ちていたDockerfileがバージョンでこけていたので修正。いずれまたバージョンが上がればこけそうな予感はする。
+FROM gettyimages/spark:2.4.1-hadoop-3.0 RUN apt-get update &amp;amp;&amp;amp; \ apt-get install -y wget &amp;amp;&amp;amp; \ rm -rf /var/lib/apt/lists/* RUN mkdir -p /apps &amp;amp;&amp;amp; \ cd /apps &amp;amp;&amp;amp; \ wget https://ftp.jaist.ac.jp/pub/apache/incubator/livy/0.7.0-incubating/apache-livy-0.7.0-incubating-bin.zip &amp;amp;&amp;amp; \ unzip apache-livy-0.7.0-incubating-bin.zip -d /apps &amp;amp;&amp;amp; \ rm -f apache-livy-0.7.0-incubating-bin.zip &amp;amp;&amp;amp; \ mkdir /apps/apache-livy-0.7.0-incubating-bin/logs EXPOSE 8998 CMD [&amp;quot;/apps/apache-livy-0.7.0-incubating-bin/bin/livy-server&amp;quot;]  起動 # $ docker build . -t livy-spark $ docker run -d -p 8998:8998 livy-spark $ curl localhost:8998/sessions -X POST --data &#39;{&amp;quot;kind&amp;quot;:&amp;quot;spark&amp;quot;}&#39; -H &amp;quot;Content-Type: application/json&amp;quot; $ curl localhost:8998/sessions/0/statements -X POST -H &#39;Content-Type: application/json&#39; -d &#39;{&amp;quot;code&amp;quot;:&amp;quot;val x = List((1, \&amp;quot;a\&amp;quot;), (3, \&amp;quot;b\&amp;quot;)).</description>
+    </item>
+    
+    <item>
+      <title>FHEが気になる人が読むと良さげな資料</title>
+      <link>https://lilyclef.github.io/blog/20200608_fhe/</link>
+      <pubDate>Mon, 08 Jun 2020 01:47:24 +0900</pubDate>
+      
+      <guid>https://lilyclef.github.io/blog/20200608_fhe/</guid>
+      <description>本記事は旧ブログから移行しました
+完全準同型暗号（FHE）と言う暗号がある # Fully Homomorphic Encryption.
+Craig Gentry氏が2009年に考案した、暗号化した文同士の加算・乗算相当演算を復号せずに処理できる画期的な暗号の提案になる。
+この暗号を用いることで、プライバシーの配慮が必要なデータの保持者が手元で暗号化し、データの中身を見られることなく外部に計算作業を任せられ、暗号化された計算済みデータが返ってくれば、秘密鍵で復号してデータを得るといったユースケースが実現できる。 ただし、キーポイントである加算・乗算相当演算の部分で計算時間が大分掛かる。
+完全準同型暗号との出会い # 学士修士合わせて3年ほど研究対象として扱わねばならなかったので自分なりに学習することになった。
+入門レベルの勉強資料が少なめであること、特に日本語での資料が限られていることが気になったので、完全準同型暗号への理解が深まりそうな日本語の文献の紹介をしていきたい。
+資料紹介 #  Fully Homomorphic Encryption Using Ideal Lattices  発案者のCraig Gentry氏の代表作。2020/06/09現在の引用数6508。10ページほどの論文になる。   A FULLY HOMOMORPHIC ENCRYPTION SCHEME  Craig Gentry氏のスタンフォード大博士論文。209ページの大作になるが、一つ一つ丁寧な章立てがあり、輪講しつつ理解を深めるのにちょうど良さそう。   暗号文のままで計算しよう - 準同型暗号入門  よく見かける。研究で使用したプログラムの中にこのスライドの著者の先生のcommitも含まれていたので、きっとお世話になっている。 スライドはイメージを掴むのに良い。他の話題も少し混じっている印象を受ける。31ページ以降が本題。 8ページのカップアンドボールの喩えはマジシャン的にはちょっと混乱しかねない。   イデアル格子暗号入門  個人的にはこれを読んで欲しいが為にこの記事を書いている。特に準同型な暗号というイメージが付かないフェーズの時に是非読んで欲しい。Gentry氏論文タイトルの&amp;quot;Using Ideal Lattices&amp;quot;とあるように数学の概念をいくつか理解しないといけない部分があるが乗り越えたいところ。 これを読んでから完全準同型暗号の説明で出てくる多項式ベースのといった言葉や菱形の妙なマス目の絵の消化が少し良くなった気がした。 著者の有田先生には個人的にも大変お世話になった先生である。先生も含む各暗号研究者達が執筆した「暗号理論と楕円曲線」をまだ読み切れていないものの、第1章から心踊る気配がしたのでいつかもう一度格闘したい。   電子情報通信学会 Vol.99 No.12 (2016.12) - IEICE会誌 試し読みサイト  電子情報通信学会の学会誌が完全準同型暗号をテーマにした特集を実施し、複数の研究者が寄稿したことがある。私は運良くたまたま雑誌形態で手に入れることになったが、これがなければもっとも重要で大変なBootstrapの作業の理解が出来なかったと思う。（もう今は忘れたけど&amp;hellip;） 現在試し読みサイトからの閲覧も可能なので、この機会に是非。   HElib  完全準同型暗号の実装ライブラリのうち著者にもっとも近い実装がHElib。Gentry氏が所属するIBMのもの。（ちなみにさらにフォークしたshaih/HElibが自分がお世話になっていたやつだったような気がする…） あまり自分は詳しくないが、最近は他にも様々な実装ライブラリが考案されている模様。 FHEを使ったコンテストを目にすることもあるので、意外とわいわいしているのかもしれない。なお私は参加しようかなと一瞬思いかけたが無理だと判断した。そんな人生がちょっぴり悲しいので、やっても良かったのかもしれない。   その他日本語論文・プレスリリース・プロジェクト  日本語になった時点で数が少ないので、正直現時点では追いかけられる量な気がしている。    何だか眠くなってきたのでこの辺で。</description>
+    </item>
+    
+    <item>
+      <title>Icedを触ってみた</title>
+      <link>https://lilyclef.github.io/blog/20200522_iced/</link>
+      <pubDate>Fri, 22 May 2020 00:13:00 +0900</pubDate>
+      
+      <guid>https://lilyclef.github.io/blog/20200522_iced/</guid>
+      <description>本記事は旧ブログから移行しました
+IcedというRust GUIアプリケーション フレームワークがある #  hecrj/iced: A cross-platform GUI library for Rust, inspired by Elm  ElmにインスパイアされたRust製クロスプラットフォームGUIライブラリとのことで、「なんだか便利そう」程度のモチベーションで触ってみたが、結構使い心地が良く、大変気に入っている。
+全体的なスタイルとしては、アプリケーションが状態を保持し、メッセージ等の機能によって状態を変化させる、謂わばステートマシンモデルのアプリケーション製作であり、これが個人的に大変手馴染みが良い。
+ Trait iced::Application  このスタイルが恐らくElmからもたらされたと考えられるが、私はElmを全く知らない。 しかし、この手馴染みの良さ、そしてこのどこか懐かしい感覚は一体なんだろうか。
+ Rustがパターンマッチングを持つのでOCamlを思い出しているのかしら?
+  待てよ、OCaml..OCamlだっ💡(:3
+ 学部3年生の時のOCaml Universeアプリケーション製作だな。
+ステートマシンモデルでアプリケーションを作るスタイルの出自については良く分かっていないが、関数型言語系アプリケーションの潮流なのかもしれないなぁと適当なことを考えた。（注：このNotesはひどく適当なので、何かコメントがございましたらIssueでご連絡いただけると幸いです。）
+というわけで、楽しく書かせていただいている。作者に感謝したい。
+あとは、作者に対する好感度も非常に高く持てるところがこのライブラリのいいところな気がする。 例えばIssueでは、ほとんどの質問に対して、作者が質問に良く答えている印象。
+ アイコンをどうするかワイワイ話し合っている。楽しそう。  Iced branding #143   個人的に役立ったフォントに関するissue  Does not support chinese? #213   個人的に役立ったストリームデータに関するissue  Create Subscription from futures::stream::Stream #338   キーイベントを簡単に補足する機能が実装されるかといったFuture Request Questionにも回答してもらえている。  Capture Key Events #173    今日はこの辺で。今後は気づいたTipsも投稿したい。</description>
     </item>
     
   </channel>

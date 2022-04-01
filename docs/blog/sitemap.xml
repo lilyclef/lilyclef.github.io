@@ -14,4 +14,39 @@
       <changefreq>weekly</changefreq>
       <priority>0.5</priority>
     </url>
+    
+    <url>
+      <loc>https://lilyclef.github.io/blog/20201207_adventcyber/</loc>
+      <lastmod>2020-12-10T22:00:00+09:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>https://lilyclef.github.io/blog/20200803_inctf/</loc>
+      <lastmod>2020-08-03T22:21:22+09:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>https://lilyclef.github.io/blog/20200722_livy/</loc>
+      <lastmod>2020-07-22T00:00:00+09:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>https://lilyclef.github.io/blog/20200608_fhe/</loc>
+      <lastmod>2020-06-08T01:47:24+09:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    
+    <url>
+      <loc>https://lilyclef.github.io/blog/20200522_iced/</loc>
+      <lastmod>2020-05-22T00:13:00+09:00</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+    </url>
     </urlset>
