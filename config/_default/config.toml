@@ -1,4 +1,4 @@
-baseurl = "https://lilyclef.github.io/"
+baseurl = "https://clef.tokyo/"
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true

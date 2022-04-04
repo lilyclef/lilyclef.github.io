@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lilyclef.github.io/sitemap.xml
+Sitemap: https://clef.tokyo/sitemap.xml

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Contributors on </title>
-    <link>https://lilyclef.github.io/contributors/</link>
+    <link>https://clef.tokyo/contributors/</link>
     <description>Recent content in Contributors on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Fri, 01 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://lilyclef.github.io/contributors/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://clef.tokyo/contributors/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Yuri</title>
-      <link>https://lilyclef.github.io/contributors/yuri/</link>
+      <link>https://clef.tokyo/contributors/yuri/</link>
       <pubDate>Fri, 01 Apr 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://lilyclef.github.io/contributors/yuri/</guid>
+      <guid>https://clef.tokyo/contributors/yuri/</guid>
       <description>@lily_clef</description>
     </item>
     

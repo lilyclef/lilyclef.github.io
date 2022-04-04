@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog on </title>
-    <link>https://lilyclef.github.io/blog/</link>
+    <link>https://clef.tokyo/blog/</link>
     <description>Recent content in Blog on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja-JP</language>
-    <lastBuildDate>Wed, 30 Mar 2022 21:20:00 +0900</lastBuildDate><atom:link href="https://lilyclef.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 30 Mar 2022 21:20:00 +0900</lastBuildDate><atom:link href="https://clef.tokyo/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>結局Hugo</title>
-      <link>https://lilyclef.github.io/blog/20220331_hugo/</link>
+      <link>https://clef.tokyo/blog/20220331_hugo/</link>
       <pubDate>Wed, 30 Mar 2022 22:21:05 +0900</pubDate>
       
-      <guid>https://lilyclef.github.io/blog/20220331_hugo/</guid>
+      <guid>https://clef.tokyo/blog/20220331_hugo/</guid>
       <description>言い訳 # ブログは一から自分で実装したほうがいいと思うのだけど、明日には自分のやる気が無くなっているかもしれない。そのうち、自分で実装したものに置き換える日が来るといいね。
 今回ハマったところ #  draftをtrueにするとPublishされない。 それはそう Hugo共通の仕様なのに忘れていた。  今回変えたところ #  色変更 同じHugoでもThemeによってレイアウトの変更の仕方が異なる。 今回は公式を見れば変更できたので、よく考えられていると思う。 色は愛用しているMoonlight Themeに寄せて選んだ。  今後変えたいところ #  フォントを変えたい。 明日(2022/04/01)にモリサワフォントがGoogle Fontsの仲間入りするそうなのでそれを待つ。 トップ画面で何をするか考える。 Markdownをシュッと書ける編集・投稿ページが欲しい。 自分でブログを実装する時間を持つ。今はOS制作を優先したい。  最後に # 右上でダークモードとライトモードの切り替えができて、おしゃれで良い。
 有効化すれば多言語切り替えにも対応していたり、色々とやりこみ要素はある。
@@ -21,20 +21,20 @@
     
     <item>
       <title>PDCAは知らないけれど名古屋飯は美味しい</title>
-      <link>https://lilyclef.github.io/blog/20220331_pdca/</link>
+      <link>https://clef.tokyo/blog/20220331_pdca/</link>
       <pubDate>Wed, 30 Mar 2022 21:20:00 +0900</pubDate>
       
-      <guid>https://lilyclef.github.io/blog/20220331_pdca/</guid>
+      <guid>https://clef.tokyo/blog/20220331_pdca/</guid>
       <description>名古屋美味しい # 有給+休日で３日ほどお時間を頂いて、本を読むことにした。 技術書を読むのが苦手で、何かを良いサイクルで終わらせることも苦手なのだけれど、美味しいものを食べて温泉に入ったら本が読めました。 ありがとう、名古屋。
 [TODO]名古屋訪問記をここに書く。 # </description>
     </item>
     
     <item>
       <title>Advent of Cyber 2020 Christmas</title>
-      <link>https://lilyclef.github.io/blog/20201207_adventcyber/</link>
+      <link>https://clef.tokyo/blog/20201207_adventcyber/</link>
       <pubDate>Thu, 10 Dec 2020 22:00:00 +0900</pubDate>
       
-      <guid>https://lilyclef.github.io/blog/20201207_adventcyber/</guid>
+      <guid>https://clef.tokyo/blog/20201207_adventcyber/</guid>
       <description>本記事は旧ブログから移行しました
 Advent Cyber 2020 やってみたら楽しかった。 #    TryHackMe!という教育サイトのイベントで、教育的なCTFになっておりとても楽しいCTF。ご丁寧にサンタ帽の陽気な解説者によるYouTubeで解説動画もあり、辛いときはそれもヒントになるので、CTF解けなくて苦手意識感じている人にも向いている予感。 一時的な環境が作成され、VPNで接続してチャレンジする形式でウェブサイトの作りがなんだか凝っている。
 Day1 A Christmas Crisis #  VPNを繋ぐときにリージョンをAU-xxxにしないと繋がらない罠があるので注意。 HTTP, Cookieについての解説記事が書かれている。 フォーマット名はヒントの&amp;quot;shorthand for binary&amp;quot;で検索する。  &amp;gt;&amp;gt;&amp;gt; &#39;もふもふ&#39;.encode(&#39;utf-8&#39;).hex() &#39;e38282e381b5e38282e381b5&#39; &amp;gt;&amp;gt;&amp;gt; bytearray.fromhex(&amp;quot;e38282e381b5e38282e381b5&amp;quot;).decode() &#39;もふもふ&#39;   変換サイト使ってしまったけれど、Pythonですぐ変換できる。 Cookieeは書き換えてリロードすれば読み込まれる。  Day2 The Elf Strikes Back! #  php-reverse-shellをphpとしてうまくアップロードさせて、リバースシェル状況を作ることでbashを奪うことが出来た。  Kali/AttackBoxに上のファイルがあるらしい。   リバースシェルはAttackerがncコマンドのlisten mode（sudo nc -lvnp 443）を使うことで設定可能。 最初MacBookのncで-lが使えなかったが、brew install netcatでインストールしたコマンドであればOK リバース シェル悪用の防御 BashでTCP/UDP通信を行う | 俺的備忘録 〜なんかいろいろ〜  Day3 Christmas Chaos #  Burpの使い方講座。 ブラウザのプロキシを使ってBurpに転送させ、リクエストを止めたりしつつ、使う。FoxyProxyも使う。 ユーザー名とパスワードの組み合わせを自動で合わせてtryしてくれる機能もあった。 Check that Burp Suite&amp;rsquo;s proxy listener is active - PortSwigger Configuring Firefox to work with Burp - PortSwigger Configuring your external browser to work with Burp - PortSwigger  Day4 Santa&amp;rsquo;s watching #  Fuzzing = fancy bruteforcing をやってみようという回 GoBusterというツールで隠れファイルやディレクトリの検出ができる。  OJ/gobuster: Directory/File, DNS and VHost busting tool written in Go gobuster dir -u http://example.</description>
@@ -42,10 +42,10 @@ Day1 A Christmas Crisis #  VPNを繋ぐときにリージョンをAU-xxxにし�
     
     <item>
       <title>InCTF参加記:PolyRSA</title>
-      <link>https://lilyclef.github.io/blog/20200803_inctf/</link>
+      <link>https://clef.tokyo/blog/20200803_inctf/</link>
       <pubDate>Mon, 03 Aug 2020 22:21:22 +0900</pubDate>
       
-      <guid>https://lilyclef.github.io/blog/20200803_inctf/</guid>
+      <guid>https://clef.tokyo/blog/20200803_inctf/</guid>
       <description>本記事は旧ブログから移行しました
 感想 #   なんか惜しいところまで行ったような気がするんだけど、そうでもなかったりする&amp;hellip;
   お久しぶりの方々にお会いできたのは嬉しかった。
@@ -57,10 +57,10 @@ Day1 A Christmas Crisis #  VPNを繋ぐときにリージョンをAU-xxxにし�
     
     <item>
       <title>lilyclefはLivyを起動したい</title>
-      <link>https://lilyclef.github.io/blog/20200722_livy/</link>
+      <link>https://clef.tokyo/blog/20200722_livy/</link>
       <pubDate>Wed, 22 Jul 2020 00:00:00 +0900</pubDate>
       
-      <guid>https://lilyclef.github.io/blog/20200722_livy/</guid>
+      <guid>https://clef.tokyo/blog/20200722_livy/</guid>
       <description>本記事は旧ブログから移行しました
 Dockerfile # Issueに落ちていたDockerfileがバージョンでこけていたので修正。いずれまたバージョンが上がればこけそうな予感はする。
 FROM gettyimages/spark:2.4.1-hadoop-3.0 RUN apt-get update &amp;amp;&amp;amp; \ apt-get install -y wget &amp;amp;&amp;amp; \ rm -rf /var/lib/apt/lists/* RUN mkdir -p /apps &amp;amp;&amp;amp; \ cd /apps &amp;amp;&amp;amp; \ wget https://ftp.jaist.ac.jp/pub/apache/incubator/livy/0.7.0-incubating/apache-livy-0.7.0-incubating-bin.zip &amp;amp;&amp;amp; \ unzip apache-livy-0.7.0-incubating-bin.zip -d /apps &amp;amp;&amp;amp; \ rm -f apache-livy-0.7.0-incubating-bin.zip &amp;amp;&amp;amp; \ mkdir /apps/apache-livy-0.7.0-incubating-bin/logs EXPOSE 8998 CMD [&amp;quot;/apps/apache-livy-0.7.0-incubating-bin/bin/livy-server&amp;quot;]  起動 # $ docker build . -t livy-spark $ docker run -d -p 8998:8998 livy-spark $ curl localhost:8998/sessions -X POST --data &#39;{&amp;quot;kind&amp;quot;:&amp;quot;spark&amp;quot;}&#39; -H &amp;quot;Content-Type: application/json&amp;quot; $ curl localhost:8998/sessions/0/statements -X POST -H &#39;Content-Type: application/json&#39; -d &#39;{&amp;quot;code&amp;quot;:&amp;quot;val x = List((1, \&amp;quot;a\&amp;quot;), (3, \&amp;quot;b\&amp;quot;)).</description>
@@ -68,10 +68,10 @@ FROM gettyimages/spark:2.4.1-hadoop-3.0 RUN apt-get update &amp;amp;&amp;amp; \ 
     
     <item>
       <title>FHEが気になる人が読むと良さげな資料</title>
-      <link>https://lilyclef.github.io/blog/20200608_fhe/</link>
+      <link>https://clef.tokyo/blog/20200608_fhe/</link>
       <pubDate>Mon, 08 Jun 2020 01:47:24 +0900</pubDate>
       
-      <guid>https://lilyclef.github.io/blog/20200608_fhe/</guid>
+      <guid>https://clef.tokyo/blog/20200608_fhe/</guid>
       <description>本記事は旧ブログから移行しました
 完全準同型暗号（FHE）と言う暗号がある # Fully Homomorphic Encryption.
 Craig Gentry氏が2009年に考案した、暗号化した文同士の加算・乗算相当演算を復号せずに処理できる画期的な暗号の提案になる。
@@ -83,10 +83,10 @@ Craig Gentry氏が2009年に考案した、暗号化した文同士の加算・�
     
     <item>
       <title>Icedを触ってみた</title>
-      <link>https://lilyclef.github.io/blog/20200522_iced/</link>
+      <link>https://clef.tokyo/blog/20200522_iced/</link>
       <pubDate>Fri, 22 May 2020 00:13:00 +0900</pubDate>
       
-      <guid>https://lilyclef.github.io/blog/20200522_iced/</guid>
+      <guid>https://clef.tokyo/blog/20200522_iced/</guid>
       <description>本記事は旧ブログから移行しました
 IcedというRust GUIアプリケーション フレームワークがある #  hecrj/iced: A cross-platform GUI library for Rust, inspired by Elm  ElmにインスパイアされたRust製クロスプラットフォームGUIライブラリとのことで、「なんだか便利そう」程度のモチベーションで触ってみたが、結構使い心地が良く、大変気に入っている。
 全体的なスタイルとしては、アプリケーションが状態を保持し、メッセージ等の機能によって状態を変化させる、謂わばステートマシンモデルのアプリケーション製作であり、これが個人的に大変手馴染みが良い。
