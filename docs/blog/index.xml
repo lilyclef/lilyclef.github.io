@@ -8,6 +8,23 @@
     <language>ja-JP</language>
     <lastBuildDate>Wed, 30 Mar 2022 21:20:00 +0900</lastBuildDate><atom:link href="https://clef.tokyo/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Rust製 GUI IRCクライアント自作</title>
+      <link>https://clef.tokyo/blog/20220406_gelato/</link>
+      <pubDate>Wed, 06 Apr 2022 21:23:08 +0900</pubDate>
+      
+      <guid>https://clef.tokyo/blog/20220406_gelato/</guid>
+      <description>自分の数々の駄作プロジェクトについて語りたくなった。 自分の駄作を話すのは恥ずかしいのだけれど、自分がどこが分かっていないかがハッキリするかもしれないからね！
+という訳で、自分の駄作プロジェクト紹介第一弾は！
+Rust製 GUI IRC（Internet Relay Chat Protocol）クライアント自作です。わーぱちぱち。
+コードはここ👉gelato🍨 #  A GUI IRC Client. Be Pop and Cool!
+ とまぁ、実装する前に書いたので飛ばしたセリフが書いてありますが、現時点の実装状況は別にクールでも何でもありません。
+Rustで何か作りたい思いついちゃったGUI IRCクライアントアイデアを実現したい気持ち # が先行して、Rustの文法を勉強する前に書き始めちゃったので、実装の一部分が謎な状態。 現在は文法を勉強する前に書き始めたことを反省しており、本やドキュメントなどのを通しで見てから、再実装に取り掛かろうと思ったのも束の間、 お買い物にゲームにファッションに電子工作に自作OSに時間を取られ、放置中〜
+でも皆に紹介ぐらいしてもいいのかもしれない。謎実装は通信の部分なので面白いかもしれないし&amp;hellip;
+初期実装衝動 #  「え&amp;quot;っ！IRC:rfc1459ってTCPソケットに&amp;quot;文字列&amp;lt;スペース&amp;gt;文字列&amp;lt;スペース&amp;gt;文字列&amp;quot;を流し込んでいるだけなの！？HTTPより簡単じゃん。記事感謝」 「limechatさん今も愛されているのいいなー！けど、Last Commitが2018年で止まっているみたい？（※開発開始2020.03当時。現在確認したところ、2020.07から再開している模様&amp;hellip;？）」 「Rust製クロスコンパイル環境対応GUIアプリケーションライブラリicedさん、かっこよ&amp;hellip;好き&amp;hellip;（最新リリース時間経っているから少し心配🥺）」 入社自己紹介でうっかりRustに興味あるって言ってしまったせいで、「まだRust入門しないんですかって聞かれたらどうしよ&amp;hellip;😅」 「何この職場IRCに重要な情報が流れていくんですが&amp;hellip;（現在は廃止）メンションはいらないけど今のセンパイの発言キープしたい！キープボタン実装したいんだが！？！」 「こうちょちょっと複数パネルとかサクッと作れるといいよね。やっぱり私はweechatさん激推しだわ。自作プラグインでカスタマイズも出来るし&amp;hellip;でもCUIなせいでコピペが難し&amp;quot;い&amp;quot;何&amp;quot;で&amp;quot;」 「検索も出来ると嬉しいし、ミュートとか、あとカラバリ豊富なテーマがあるといいかも〜」 「icedライブラリを使った、カラフルテーマで、キープボタンがあって、プラグインなんかも作れたらいい感じ&amp;hellip; そうだ💡gelatoって名前にすれば、flavorとかchipとかtoppingみたいなtermが使えていい感じですわ！作るしかありませんわ！！！」  仕事が忙しければ忙しいほど、頭がアイデアを出してくる体質なんとかならないんですかね。
+基本方針 #  GUIはiced 0.0.3のexampleのtodo,download_progress,pane_grid,scrollableを参考に作る。 IRC部分はTCPソケット自分で書くか迷ったけれど、大量のIRCのコマンド仕分け（LOGINとかPINGとかJOINとか）を自分で実装するのをダルがったので、既存のRust IRC 0.14ライブラリを使用して、もし気が向いたら自分で書くように置き換えようかなと思っていた。ただ、今から考えると、このIRCライブラリとicedの合体で苦労して怪しい実装 悪魔的融合👿 になっているので、TCPソケット通信部分を自分で書いてしまった方が楽かもしれない。開発再開するとしたら、機能つけたい気持ちをグッと抑えて、ブランチ切ってTCPソケット書きから始めるかな&amp;hellip;  現在の進捗 #  上の展望ほとんど達成していない。一応メッセージが送れるので、辛うじてIRCクライアントの体を保っている程度。 ホスト・ポート・ユーザ名・入りたい複数のルーム名をsetting.jsonに書いておくと、一応メッセージが送れます。 パネルをボタンクリックで増やして、クリックしたパネルがアクティブモードになって、アクティブモードになっているルームに対してメッセージが送れます。 日本語も送れるけど、日本語書き込み中の推測文字を表示するIMEが出てこない。これは、RustのGUI系ライブラリ側の問題で日本のRustceanの皆様も取り組まれている模様。Tracking issue for IME / composition support #1497 GUI操作楽しいー！けれど、これはicedさんのおかげで私のおかげではない。 色合いはポップでクールじゃん？（※じゃんは神奈川方言らしい）  技術的なsomething&amp;hellip; # Client Stream #  先ほど悪魔的融合と呼んだ部分がこちらのsubscribe_irc  icedはdocにあるように、ElmアーキテクチャにインスパイアされたGUIアプリケーションライブラリであり下記の4つを意識する。</description>
+    </item>
+    
+    <item>
       <title>結局Hugo</title>
       <link>https://clef.tokyo/blog/20220331_hugo/</link>
       <pubDate>Wed, 30 Mar 2022 22:21:05 +0900</pubDate>
