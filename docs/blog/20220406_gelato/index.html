@@ -254,10 +254,11 @@
 
       </div>
       <p class="lead">美味しいジェラートのつもりで作ったけれど、気づいたら放置。</p>
-      <p>自分の数々の駄作プロジェクトについて語りたくなった。
-自分の駄作を話すのは恥ずかしいのだけれど、自分がどこが分かっていないかがハッキリするかもしれないからね！</p>
-<p>という訳で、自分の駄作プロジェクト紹介第一弾は！</p>
-<p>Rust製 GUI IRC（Internet Relay Chat Protocol）クライアント自作です。わーぱちぱち。</p>
+      <p>自分の数々の駄作プロジェクトについて語りたいシリーズを始めようと思う。
+自分の駄作を話すのは恥ずかしいのだけれど、自分がどこが分かっていないかがハッキリすると期待して。</p>
+<p>駄作プロジェクト紹介第一弾は！</p>
+<p>Rust製 GUI IRC（Internet Relay Chat Protocol）クライアント自作です。</p>
+<p>わーぱちぱち。</p>
 <h2 id="コードはここgelatohttpsgithubcomlilyclefgelato">コードはここ👉<a href="https://github.com/lilyclef/gelato">gelato🍨</a> <a href="#%e3%82%b3%e3%83%bc%e3%83%89%e3%81%af%e3%81%93%e3%81%93gelatohttpsgithubcomlilyclefgelato" class="anchor" aria-hidden="true">#</a></h2>
 <blockquote>
 <p>A GUI IRC Client. Be Pop and Cool!</p>
@@ -270,27 +271,30 @@
 でも皆に紹介ぐらいしてもいいのかもしれない。謎実装は通信の部分なので面白いかもしれないし&hellip;</p>
 <h2 id="初期実装衝動">初期実装衝動 <a href="#%e5%88%9d%e6%9c%9f%e5%ae%9f%e8%a3%85%e8%a1%9d%e5%8b%95" class="anchor" aria-hidden="true">#</a></h2>
 <ul>
-<li>「え&quot;っ！<a href="https://www.ietf.org/rfc/rfc1459.txt">IRC:rfc1459</a>ってTCPソケットに&quot;文字列&lt;スペース&gt;文字列&lt;スペース&gt;文字列&quot;を流し込んでいるだけなの！？HTTPより簡単じゃん。<a href="https://qiita.com/takesyhi/items/cfde655f5769286a770a">記事感謝</a>」</li>
-<li>「<a href="https://github.com/psychs/limechat">limechat</a>さん今も愛されているのいいなー！けど、Last Commitが2018年で止まっているみたい？（※開発開始2020.03当時。現在確認したところ、2020.07から再開している模様&hellip;？）」</li>
+<li>「え&quot;っ！<a href="https://www.ietf.org/rfc/rfc1459.txt">IRC:rfc1459</a>ってTCPソケットに&quot;文字列&lt;スペース&gt;文字列&lt;スペース&gt;文字列&quot;を流し込んでいるだけなの！？HTTPより簡単そう。<a href="https://qiita.com/takesyhi/items/cfde655f5769286a770a">記事感謝</a>」</li>
+<li>「<a href="https://github.com/psychs/limechat">limechat</a>さん今も愛されているのいいなー！でもLast Commitが2018年で止まっている模様？（※開発開始2020.03当時。現在確認したところ、2020.07から再開している様子&hellip;？）」</li>
 <li>「Rust製クロスコンパイル環境対応GUIアプリケーションライブラリ<a href="https://github.com/iced-rs/iced">iced</a>さん、かっこよ&hellip;好き&hellip;（最新リリース時間経っているから少し心配🥺）」</li>
-<li>入社自己紹介でうっかりRustに興味あるって言ってしまったせいで、「まだRust入門しないんですかって聞かれたらどうしよ&hellip;😅」</li>
-<li>「何この職場IRCに重要な情報が流れていくんですが&hellip;（現在は廃止）メンションはいらないけど今のセンパイの発言キープしたい！キープボタン実装したいんだが！？！」</li>
-<li>「こうちょちょっと複数パネルとかサクッと作れるといいよね。やっぱり私は<a href="https://weechat.org/">weechat</a>さん激推しだわ。自作プラグインでカスタマイズも出来るし&hellip;でもCUIなせいでコピペが難し&quot;い&quot;何&quot;で&quot;」</li>
-<li>「検索も出来ると嬉しいし、ミュートとか、あとカラバリ豊富なテーマがあるといいかも〜」</li>
-<li>「icedライブラリを使った、カラフルテーマで、キープボタンがあって、プラグインなんかも作れたらいい感じ&hellip; そうだ💡gelatoって名前にすれば、flavorとかchipとかtoppingみたいなtermが使えていい感じですわ！作るしかありませんわ！！！」</li>
+<li>入社自己紹介でうっかりRustに興味あるって言ってしまったせいで、「まだRust入門しないんですかって聞かれたらどうしよう😅」</li>
+<li>「何この職場IRCに重要な情報が流れていくんですが&hellip;（現在は廃止）メンションはいらないけど今のセンパイの発言キープしたい！いろいろな機能を実装したい」</li>
+<li>「こうちょちょっと複数パネルとかサクッと作れるといいよね。やっぱり私は<a href="https://weechat.org/">weechat</a>さん激推しだわ。自作プラグインでカスタマイズも出来るし&hellip;でもCUIなせいでコピペが難しい&hellip;」</li>
+<li>「検索も出来ると嬉しいし、ミュートとか、あとカラバリ豊富なテーマがあるといいかもしれない」</li>
+<li>「icedライブラリを使った、カラフルテーマで、キープボタンがあって、プラグインなんかも作れたらいい感じ&hellip;」</li>
+<li>「そうだ！gelatoって名前にすれば、flavorとかchipとかtoppingみたいなtermが使えていい感じですわ！作るしかありませんわ！！！」</li>
 </ul>
 <p>仕事が忙しければ忙しいほど、頭がアイデアを出してくる体質なんとかならないんですかね。</p>
 <h2 id="基本方針">基本方針 <a href="#%e5%9f%ba%e6%9c%ac%e6%96%b9%e9%87%9d" class="anchor" aria-hidden="true">#</a></h2>
 <ul>
-<li>GUIはiced 0.0.3の<a href="https://github.com/iced-rs/iced/tree/master/examples">example</a>のtodo,download_progress,pane_grid,scrollableを参考に作る。</li>
-<li>IRC部分はTCPソケット自分で書くか迷ったけれど、大量のIRCのコマンド仕分け（LOGINとかPINGとかJOINとか）を自分で実装するのをダルがったので、既存の<a href="https://github.com/aatxe/irc">Rust IRC 0.14</a>ライブラリを使用して、もし気が向いたら自分で書くように置き換えようかなと思っていた。ただ、今から考えると、このIRCライブラリとicedの合体で苦労して怪しい実装 <strong>悪魔的融合👿</strong> になっているので、TCPソケット通信部分を自分で書いてしまった方が楽かもしれない。開発再開するとしたら、機能つけたい気持ちをグッと抑えて、ブランチ切ってTCPソケット書きから始めるかな&hellip;</li>
+<li>GUIはiced 0.0.3の<a href="https://github.com/iced-rs/iced/tree/master/examples">example</a>のtodo,download_progress,pane_grid,scrollableを参考に作成。</li>
+<li>IRC部分はTCPソケット自分で書くか迷ったけれど、大量のIRCのコマンド仕分け（LOGINとかPINGとかJOINとか）を自分で実装する手間を惜しんだので、既存の<a href="https://github.com/aatxe/irc">Rust IRC 0.14</a>ライブラリを使用して、もし気が向いたら自分で書くように置き換えようかなと思っていました。ただ、今から考えると、このIRCライブラリとicedの合体で苦労して怪しい実装 <strong>悪魔的融合👿</strong> になっているので、TCPソケット通信部分を自分で書いてしまった方が楽かもしれない。開発再開するとしたら、機能つけたい気持ちをグッと抑えて、ブランチ切ってTCPソケット書きから始めるかな&hellip;</li>
 </ul>
 <h2 id="現在の進捗">現在の進捗 <a href="#%e7%8f%be%e5%9c%a8%e3%81%ae%e9%80%b2%e6%8d%97" class="anchor" aria-hidden="true">#</a></h2>
 <ul>
-<li>上の展望ほとんど達成していない。一応メッセージが送れるので、辛うじてIRCクライアントの体を保っている程度。</li>
+<li>上の展望ほとんど達成していない。一応メッセージが送れるので、辛うじてIRCクライアントの体を保っている程度の能力。</li>
 <li>ホスト・ポート・ユーザ名・入りたい複数のルーム名をsetting.jsonに書いておくと、一応メッセージが送れます。</li>
 <li>パネルをボタンクリックで増やして、クリックしたパネルがアクティブモードになって、アクティブモードになっているルームに対してメッセージが送れます。</li>
+<li>ネット上のIRCのホストに向けてメッセージを送れるので、そこは大変楽しいです。</li>
 <li>日本語も送れるけど、日本語書き込み中の推測文字を表示するIMEが出てこない。これは、RustのGUI系ライブラリ側の問題で日本のRustceanの皆様も取り組まれている模様。<a href="https://github.com/rust-windowing/winit/issues/1497">Tracking issue for IME / composition support #1497</a></li>
+<li>PINGとかプライベートメッセージなどの具体的なコマンドで分岐して機能を実行する実装はまだやっていません。単に文字列を送り受け取るのみの状態。</li>
 <li>GUI操作楽しいー！けれど、これはicedさんのおかげで私のおかげではない。</li>
 <li>色合いはポップでクールじゃん？（※じゃんは神奈川方言らしい）</li>
 </ul>
@@ -308,12 +312,12 @@
 <li>Update logic — a way to react to messages and update your state</li>
 </ul>
 </blockquote>
-<p>Stateというアプリケーションで必要な全ての情報の状態を管理する構造体があって、例えば画面クリックされるとMessageが飛ぶように設定しておくと、MessageをUpdate関数が受け取って、Stateが更新され、ViewはそのStateに対応した表示をしているという、スタイル。</p>
+<p>Stateというアプリケーションで必要な全ての情報の状態を管理する構造体があって、例えば画面クリックされるとMessageが飛ぶように設定しておくと、MessageをUpdate関数が受け取って、Stateが更新され、ViewはそのStateに対応した表示をしているというスタイル。</p>
 <p>外部のイベントをリッスンする機能として、subscriptionが提供されている。
-外部の非同期処理を実行しつつ、恐らくポーリングの要領でsubscription用のメッセージを飛ばしてくれる&hellip;イメージでいる。</p>
-<p>参考にしたのは、<a href="https://github.com/iced-rs/iced/blob/master/examples/download_progress/src/download.rs">iced/example/download_progress</a></p>
-<p>このサンプルは、RustのポピュラーなHTTPクライアント<a href="https://docs.rs/reqwest/latest/reqwest/">reqwest</a>でファイルをダウンロードしつつ、ダウンロードが何%ぐらいなのかを表示するものです。
-もし、subscriptionでのステートがダウンロード中モードで、chunkにデータが残っていれば、パーセンテージを計算して、第一引数にメッセージとして送りたいものを書き、第二引数に更新後のsubscriptionステートをダウンロード中モードで書いておくと、またこの処理をループすることができて、chunkが空なら終了のメッセージを送って、修了処理をする&hellip;と解釈した。（多分）</p>
+外部の非同期処理を実行しつつ、細かくsubscription用のメッセージを飛ばしてくれる&hellip;イメージでいる。（並列化されているかどうか実装確認したいところ）</p>
+<p>実装する上で参考にしたのは、<a href="https://github.com/iced-rs/iced/blob/master/examples/download_progress/src/download.rs">iced/example/download_progress</a></p>
+<p>このサンプルは、RustのポピュラーなHTTPクライアント<a href="https://docs.rs/reqwest/latest/reqwest/">reqwest</a>でファイルをダウンロードしつつ、ダウンロードが何%ぐらいなのかを表示する。
+もし、subscriptionでのステートがダウンロード中モードで、chunkにデータが残っていれば、パーセンテージを計算して、第一引数にメッセージとして送りたいものを書き、第二引数に更新後のsubscriptionステートをダウンロード中モードで書いておくと、またこの処理をループすることができ、chunkが空なら終了のメッセージを送って、修了処理をする&hellip;と解釈した。（多分）</p>
 <pre><code class="language-Rust">State::Downloading {
     mut response,
     total,
@@ -336,7 +340,7 @@
     Err(_) =&gt; (Some((id, Progress::Errored)), State::Finished),
 },
 </code></pre>
-<p>つまり、chunkをどうにかして、Rust IRCライブラリで使われているirc::client::ClientStreamから捻り出せたらいいのかな〜と雑な考えを始め、知恵の輪ガチャガチャしていたら、取れるようになりました&hellip;というのがこちらの実装。辛い。改善ポイント教えて欲しい。</p>
+<p>つまり、chunkをどうにかして、Rust IRCライブラリで使われているirc::client::ClientStreamから捻り出せたらいいのかな〜と雑な考えを始め、知恵の輪ガチャガチャしていたら、取れるようになりました&hellip;というのがこちらの実装。辛い。改善できそう。</p>
 <pre><code class="language-Rust">SubscribeIrcState::Incoming {
     client_stream,
     mut message_text,
