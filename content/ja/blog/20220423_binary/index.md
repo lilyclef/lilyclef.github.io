@@ -6,7 +6,7 @@ date: 2022-04-23T10:54:23+09:00
 lastmod: 2022-04-23T10:54:23+09:00
 draft: false
 weight: 50
-images: [""]
+images: ["20220423_binary.png"]
 contributors: [Yuri]
 ---
 
@@ -208,6 +208,8 @@ POKEDATA: Numerical result out of range
 DETACH: Numerical result out of range
 →アドレス番号を+8して8bit書き込めば良いみたい。
 ```
+
+![takazawa](20220423_binary.png)
 
 バイナリの世界であれば、言語に依らず、プロプライエタリだろうと関係なく、好き勝手が出来る自由があるんだね。
 あと、プロセスのイメージを少し勘違いしていたかもしれない。思ったより柔軟。
