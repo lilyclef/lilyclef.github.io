@@ -8,6 +8,39 @@
     <language>ja-JP</language>
     <lastBuildDate>Fri, 01 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://clef.tokyo/contributors/yuri/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Binaryの海に浮かぶたかざわじゅんすけ</title>
+      <link>https://clef.tokyo/blog/20220423_binary/</link>
+      <pubDate>Sat, 23 Apr 2022 10:54:23 +0900</pubDate>
+      
+      <guid>https://clef.tokyo/blog/20220423_binary/</guid>
+      <description>巷では、コンピュータを使って「年収を如何に上げるか」とか「すごい存在になるためにはどうしたらいいか」が流行っている様だけれど、 私には、この社会のつまらない感覚をブチ破ってくれる、サスティナブルな熱狂をください。
+という気分でパラパラを本を読んでいたら、Binaryの世界が目に止まった。
+ Binary Hacks 普通のやつらの下を行け: ptrace で実行中のプロセスにちょっかいを出す livepatch - Live Patching for Linux  私はほら、BigDataにときめくのが本職（現職はまた異なる）で、低レイヤーは別にそんなに興味あるわけじゃないんだからね！なのだけれど、沼感が良くて最近低レイヤーに入門しそう。
+ptrace(2)というシステムコールを使うと、なんと実行中の他プロセスのレジスタの書き換えやメモリ上のデータ書き換えが出来るらしく、デバッガで使われているとのこと。面白そう〜🌟
+多分知っている人は知っているのかな？
+上のbkブログさんのコードとほぼ変わらないのだけど、こんな感じのコードを作って、ブログの通りにやる。
+#include &amp;lt;stdio.h&amp;gt; #include &amp;lt;errno.h&amp;gt; #include &amp;lt;assert.h&amp;gt; #include &amp;lt;sys/ptrace.h&amp;gt; #include &amp;lt;sys/types.h&amp;gt; #include &amp;lt;sys/wait.h&amp;gt; #include &amp;lt;stdlib.h&amp;gt; int main (int argc, char **argv) { assert(argc == 4); pid_t pid = atoi(argv[1]); void *addr = (void *)strtol(argv[2], NULL, 0); void *word = (void *)strtol(argv[3], NULL, 0); ptrace(PTRACE_ATTACH, pid, NULL, NULL); perror(&amp;quot;ATTACH&amp;quot;); wait(NULL); ptrace(PTRACE_POKEDATA, pid, addr, word); perror(&amp;quot;POKEDATA&amp;quot;); ptrace(PTRACE_DETACH, pid, NULL, NULL); perror(&amp;quot;DETACH&amp;quot;); return 0; }  perror(3)は前職の人々が教えてくれた。</description>
+    </item>
+    
+    <item>
+      <title>Rust製 GUI IRCクライアント自作</title>
+      <link>https://clef.tokyo/blog/20220406_gelato/</link>
+      <pubDate>Wed, 06 Apr 2022 21:23:08 +0900</pubDate>
+      
+      <guid>https://clef.tokyo/blog/20220406_gelato/</guid>
+      <description>自分の数々の駄作プロジェクトについて語りたいシリーズを始めようと思う。 自分の駄作を話すのは恥ずかしいのだけれど、自分がどこが分かっていないかがハッキリすると期待して。
+駄作プロジェクト紹介第一弾は！
+Rust製 GUI IRC（Internet Relay Chat Protocol）クライアント自作です。
+わーぱちぱち。
+コードはここ👉gelato🍨 #  A GUI IRC Client. Be Pop and Cool!
+ とまぁ、実装する前に書いたので飛ばしたセリフが書いてありますが、現時点の実装状況は別にクールでも何でもありません。
+Rustで何か作りたい思いついちゃったGUI IRCクライアントアイデアを実現したい気持ち # が先行して、Rustの文法を勉強する前に書き始めちゃったので、実装の一部分が謎な状態。 現在は文法を勉強する前に書き始めたことを反省しており、本やドキュメントなどのを通しで見てから、再実装に取り掛かろうと思ったのも束の間、 お買い物にゲームにファッションに電子工作に自作OSに時間を取られ、放置中〜
+でも皆に紹介ぐらいしてもいいのかもしれない。謎実装は通信の部分なので面白いかもしれないし&amp;hellip;
+初期実装衝動 #  「え&amp;quot;っ！IRC:rfc1459ってTCPソケットに&amp;quot;文字列&amp;lt;スペース&amp;gt;文字列&amp;lt;スペース&amp;gt;文字列&amp;quot;を流し込んでいるだけなの！？HTTPより簡単そう。記事感謝」 「limechatさん今も愛されているのいいなー！でもLast Commitが2018年で止まっている模様？（※開発開始2020.03当時。現在確認したところ、2020.07から再開している様子&amp;hellip;？）」 「Rust製クロスコンパイル環境対応GUIアプリケーションライブラリicedさん、かっこよ&amp;hellip;好き&amp;hellip;（最新リリース時間経っているから少し心配🥺）」 入社自己紹介でうっかりRustに興味あるって言ってしまったせいで、「まだRust入門しないんですかって聞かれたらどうしよう😅」 「何この職場IRCに重要な情報が流れていくんですが&amp;hellip;（現在は廃止）メンションはいらないけど今のセンパイの発言キープしたい！いろいろな機能を実装したい」 「こうちょちょっと複数パネルとかサクッと作れるといいよね。やっぱり私はweechatさん激推しだわ。自作プラグインでカスタマイズも出来るし&amp;hellip;でもCUIなせいでコピペが難しい&amp;hellip;」 「検索も出来ると嬉しいし、ミュートとか、あとカラバリ豊富なテーマがあるといいかもしれない」 「icedライブラリを使った、カラフルテーマで、キープボタンがあって、プラグインなんかも作れたらいい感じ&amp;hellip;」 「そうだ！gelatoって名前にすれば、flavorとかchipとかtoppingみたいなtermが使えていい感じですわ！作るしかありませんわ！！！」  仕事が忙しければ忙しいほど、頭がアイデアを出してくる体質なんとかならないんですかね。
+基本方針 #  GUIはiced 0.0.3のexampleのtodo,download_progress,pane_grid,scrollableを参考に作成。 IRC部分はTCPソケット自分で書くか迷ったけれど、大量のIRCのコマンド仕分け（LOGINとかPINGとかJOINとか）を自分で実装する手間を惜しんだので、既存のRust IRC 0.14ライブラリを使用して、もし気が向いたら自分で書くように置き換えようかなと思っていました。ただ、今から考えると、このIRCライブラリとicedの合体で苦労して怪しい実装 悪魔的融合👿 になっているので、TCPソケット通信部分を自分で書いてしまった方が楽かもしれない。開発再開するとしたら、機能つけたい気持ちをグッと抑えて、ブランチ切ってTCPソケット書きから始めるかな&amp;hellip;  現在の進捗 #  上の展望ほとんど達成していない。一応メッセージが送れるので、辛うじてIRCクライアントの体を保っている程度の能力。 ホスト・ポート・ユーザ名・入りたい複数のルーム名をsetting.jsonに書いておくと、一応メッセージが送れます。 パネルをボタンクリックで増やして、クリックしたパネルがアクティブモードになって、アクティブモードになっているルームに対してメッセージが送れます。 ネット上のIRCのホストに向けてメッセージを送れるので、そこは大変楽しいです。 日本語も送れるけど、日本語書き込み中の推測文字を表示するIMEが出てこない。これは、RustのGUI系ライブラリ側の問題で日本のRustceanの皆様も取り組まれている模様。Tracking issue for IME / composition support #1497 PINGとかプライベートメッセージなどの具体的なコマンドで分岐して機能を実行する実装はまだやっていません。単に文字列を送り受け取るのみの状態。 GUI操作楽しいー！けれど、これはicedさんのおかげで私のおかげではない。 色合いはポップでクールじゃん？（※じゃんは神奈川方言らしい）  技術的なsomething&amp;hellip; # Client Stream #  先ほど悪魔的融合と呼んだ部分がこちらのsubscribe_irc  icedはdocにあるように、ElmアーキテクチャにインスパイアされたGUIアプリケーションライブラリであり下記の4つを意識する。</description>
+    </item>
+    
+    <item>
       <title>結局Hugo</title>
       <link>https://clef.tokyo/blog/20220331_hugo/</link>
       <pubDate>Wed, 30 Mar 2022 22:21:05 +0900</pubDate>
